@@ -15,6 +15,61 @@ cd diagnostic-toolkit-azure
 pip install -r requirements.txt
 ```
 
+## Autenticación
+
+El tool usa **DefaultAzureCredential** (Azure Identity), que prueba varios métodos en orden. Puedes usar **Azure CLI** (`az login`), **Managed Identity** en Azure, o **Service Principal** mediante variables de entorno.
+
+### Con Service Principal
+
+1. **Crear el Service Principal** (si aún no existe):
+
+   ```bash
+   az ad sp create-for-rbac --name "ecad-azure-diagnostic" --role Reader --scopes /subscriptions/<SUBSCRIPTION_ID>
+   ```
+
+   Salida ejemplo (guarda estos valores):
+
+   ```json
+   {
+     "appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+     "password": "secret-value",
+     "tenant": "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy"
+   }
+   ```
+
+   Para acceso a **todas las suscripciones del tenant**, asigna el rol a nivel tenant o a cada suscripción. Ejemplo para una suscripción: `--scopes /subscriptions/<SUBSCRIPTION_ID>`. Para varias, repite la asignación o usa un grupo de gestión.
+
+2. **Permisos necesarios:** el SP debe tener al menos **Reader** en las suscripciones que quieras analizar (sirve para Resource Graph, Advisor y Subscription).
+
+3. **Definir variables de entorno** y ejecutar:
+
+   ```bash
+   export AZURE_CLIENT_ID="appId-del-paso-1"
+   export AZURE_TENANT_ID="tenant-del-paso-1"
+   export AZURE_CLIENT_SECRET="password-del-paso-1"
+
+   python3 ecad_azure.py full
+   ```
+
+   No hagas `az login`; DefaultAzureCredential usará el Service Principal. Opcionalmente restringe suscripciones:
+
+   ```bash
+   export AZURE_SUBSCRIPTION_IDS="id1,id2"
+   python3 ecad_azure.py full
+   ```
+
+4. **Seguridad:** no subas el secret al repo. Usa un `.env` local (y añádelo a `.gitignore`), variables de tu CI/CD o Azure Key Vault / secret manager.
+
+**Resumen de variables para Service Principal:**
+
+| Variable | Descripción |
+|----------|-------------|
+| `AZURE_CLIENT_ID` | Application (client) ID del SP |
+| `AZURE_TENANT_ID` | Directory (tenant) ID |
+| `AZURE_CLIENT_SECRET` | Secret del SP |
+
+Con estas tres definidas, el toolkit autentica con el Service Principal sin usar `az login`.
+
 ## Guía paso a paso
 
 ### 1. Instalar y preparar
