@@ -1,0 +1,15 @@
+# Estructura de suscripciones a analizar por defecto.
+# Copia a subscriptions.yaml y ajusta los IDs.
+# Si este archivo existe, se usa cuando no se pasa --subscriptions ni AZURE_SUBSCRIPTION_ID(s).
+
+# Formato 1: lista de IDs
+subscription_ids:
+  - "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  - "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy"
+
+# Formato 2 (alternativo): lista con nombre para documentación
+# subscriptions:
+#   - id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+#     name: "Producción"
+#   - id: "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy"
+#     name: "Desarrollo"

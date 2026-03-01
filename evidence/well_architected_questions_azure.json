@@ -1,0 +1,102 @@
+{
+  "operational_excellence": {
+    "OPS1": {
+      "question": "¿Cómo determinas tus prioridades de negocio y métricas de éxito?",
+      "best_practices": ["Definir resultados de negocio", "Priorizar por valor y riesgo", "Revisar prioridades con regularidad"]
+    },
+    "OPS2": {
+      "question": "¿Cómo estructuras la organización para apoyar las cargas de trabajo?",
+      "best_practices": ["Alinear equipos con cargas de trabajo", "Equipos pequeños y autónomos", "Responsabilidades y escalación claras"]
+    },
+    "OPS3": {
+      "question": "¿Cómo la cultura organizacional apoya la excelencia operativa?",
+      "best_practices": ["Mejora continua y aprendizaje", "Postmortems sin culpa", "Automatizar operaciones"]
+    },
+    "OPS4": {
+      "question": "¿Cómo monitoreas la carga de trabajo para asegurar que opera como se espera?",
+      "best_practices": ["Azure Monitor: métricas, logs y trazas", "Definir SLIs y SLOs", "Dashboards y alertas"]
+    },
+    "OPS5": {
+      "question": "¿Cómo respondes a eventos operacionales no planificados?",
+      "best_practices": ["Runbooks en Azure Automation", "Automatizar respuesta con Logic Apps/runbooks", "Simulaciones de incidentes"]
+    }
+  },
+  "security": {
+    "SEC1": {
+      "question": "¿Cómo gestionas credenciales y autenticación?",
+      "best_practices": ["Azure AD, Managed Identities", "MFA y Conditional Access", "Evitar secretos de largo plazo"]
+    },
+    "SEC2": {
+      "question": "¿Cómo gestionas identidades para personas y cargas de trabajo?",
+      "best_practices": ["Azure AD como identidad central", "Managed Identities para recursos", "Privileged Identity Management"]
+    },
+    "SEC3": {
+      "question": "¿Cómo aplicas el principio de menor privilegio?",
+      "best_practices": ["RBAC con roles mínimos", "Revisión de acceso periódica", "Azure AD Access Reviews"]
+    },
+    "SEC4": {
+      "question": "¿Cómo detectas e investigas eventos de seguridad?",
+      "best_practices": ["Microsoft Defender for Cloud", "Azure Monitor y Log Analytics", "Sentinel para SIEM"]
+    },
+    "SEC5": {
+      "question": "¿Cómo proteges los recursos de red?",
+      "best_practices": ["NSGs, Azure Firewall", "Segmentación de redes", "Private Link / redes privadas"]
+    },
+    "SEC6": {
+      "question": "¿Cómo proteges datos en reposo y en tránsito?",
+      "best_practices": ["Cifrado con Azure Key Vault", "TLS para tránsito", "Azure Storage encryption"]
+    }
+  },
+  "reliability": {
+    "REL1": {
+      "question": "¿Cómo diseñas para requisitos de disponibilidad y recuperación?",
+      "best_practices": ["Zonas de disponibilidad y regiones", "Objetivos RTO/RPO definidos", "Arquitectura simplificada"]
+    },
+    "REL2": {
+      "question": "¿Cómo gestionas cambios en la infraestructura?",
+      "best_practices": ["Infraestructura como código (Bicep/Terraform)", "Azure DevOps / GitHub Actions", "Despliegues seguros"]
+    },
+    "REL3": {
+      "question": "¿Cómo te preparas para recuperación ante desastres?",
+      "best_practices": ["Backup y Site Recovery", "Réplicas multi-región donde aplique", "Plan de DR documentado"]
+    }
+  },
+  "cost_optimization": {
+    "COST1": {
+      "question": "¿Cómo modelas y comprendes los costos?",
+      "best_practices": ["Cost Management + presupuestos", "Etiquetado consistente", "Costos por recurso/carga"]
+    },
+    "COST2": {
+      "question": "¿Cómo optimizas el gasto en recursos de cómputo?",
+      "best_practices": ["Right-sizing con Advisor", "Reserved Instances / Savings Plans", "Escalar y apagar cuando no se use"]
+    },
+    "COST3": {
+      "question": "¿Cómo evitas y reduces desperdicio?",
+      "best_practices": ["Revisar recomendaciones de Advisor Cost", "Eliminar recursos no usados", "Optimizar almacenamiento"]
+    }
+  },
+  "performance_efficiency": {
+    "PERF1": {
+      "question": "¿Cómo escalas la carga de trabajo ante demanda?",
+      "best_practices": ["Escalado horizontal (scale set, AKS)", "Escalado automático", "Diseño sin cuellos de botella"]
+    },
+    "PERF2": {
+      "question": "¿Cómo pruebas cambios antes de producción?",
+      "best_practices": ["Pruebas de carga (Azure Load Testing)", "Entornos de staging", "Canarias y despliegues progresivos"]
+    },
+    "PERF3": {
+      "question": "¿Cómo monitoreas el rendimiento de la solución?",
+      "best_practices": ["Application Insights y Monitor", "Métricas y alertas de rendimiento", "Revisar salud de la solución"]
+    }
+  },
+  "sustainability": {
+    "SUS1": {
+      "question": "¿Cómo optimizas el uso de recursos para reducir huella?",
+      "best_practices": ["Eficiencia de recursos (right-sizing)", "Consolidar y apagar recursos no usados", "Regiones con energía más limpia"]
+    },
+    "SUS2": {
+      "question": "¿Cómo consideras la sostenibilidad en el diseño?",
+      "best_practices": ["Arquitectura eficiente en energía", "Reducir transferencia de datos innecesaria", "Ciclo de vida y eliminación de recursos"]
+    }
+  }
+}

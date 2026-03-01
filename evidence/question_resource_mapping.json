@@ -1,0 +1,36 @@
+{
+  "operational_excellence": {
+    "OPS1": { "resource_types": [], "description": "Pregunta organizacional" },
+    "OPS2": { "resource_types": [], "description": "Pregunta organizacional" },
+    "OPS3": { "resource_types": [], "description": "Pregunta organizacional" },
+    "OPS4": { "resource_types": ["microsoft.insights/components", "microsoft.operationalinsights/workspaces", "microsoft.monitor/actiongroups"], "description": "Monitoreo con Azure Monitor" },
+    "OPS5": { "resource_types": ["microsoft.automation/automationaccounts", "microsoft.logic/workflows"], "description": "Automatización y respuesta a incidentes" }
+  },
+  "security": {
+    "SEC1": { "resource_types": ["microsoft.keyvault/vaults", "microsoft.aad/domainServices"], "description": "Credenciales y autenticación" },
+    "SEC2": { "resource_types": ["microsoft.managedidentity/userassignedidentities"], "description": "Identidades gestionadas" },
+    "SEC3": { "resource_types": ["microsoft.authorization/roleassignments"], "description": "RBAC y menor privilegio" },
+    "SEC4": { "resource_types": ["microsoft.security/securitycontacts", "microsoft.operationalinsights/workspaces"], "description": "Detección y logs de seguridad" },
+    "SEC5": { "resource_types": ["microsoft.network/networksecuritygroups", "microsoft.network/azurefirewalls", "microsoft.network/virtualnetworks"], "description": "Protección de red" },
+    "SEC6": { "resource_types": ["microsoft.keyvault/vaults", "microsoft.storage/storageaccounts"], "description": "Protección de datos" }
+  },
+  "reliability": {
+    "REL1": { "resource_types": ["microsoft.compute/availabilitysets", "microsoft.resourcegraph/resources"], "description": "Disponibilidad y diseño" },
+    "REL2": { "resource_types": ["microsoft.resources/deployments", "microsoft.devops/pipelines"], "description": "IaC y despliegues" },
+    "REL3": { "resource_types": ["microsoft.recoveryservices/vaults", "microsoft.backup/backupvaults"], "description": "Backup y recuperación" }
+  },
+  "cost_optimization": {
+    "COST1": { "resource_types": ["microsoft.costmanagement"], "description": "Cost Management" },
+    "COST2": { "resource_types": ["microsoft.compute/virtualmachines", "microsoft.compute/virtualmachinescalesets"], "description": "Optimización de cómputo" },
+    "COST3": { "resource_types": [], "description": "Revisión de uso y Advisor" }
+  },
+  "performance_efficiency": {
+    "PERF1": { "resource_types": ["microsoft.compute/virtualmachinescalesets", "microsoft.containerservice/managedclusters"], "description": "Escalado" },
+    "PERF2": { "resource_types": ["microsoft.loadtestservice/loadtests"], "description": "Pruebas de carga" },
+    "PERF3": { "resource_types": ["microsoft.insights/components", "microsoft.operationalinsights/workspaces"], "description": "Monitoreo de rendimiento" }
+  },
+  "sustainability": {
+    "SUS1": { "resource_types": ["microsoft.compute/virtualmachines", "microsoft.storage/storageaccounts"], "description": "Uso eficiente de recursos" },
+    "SUS2": { "resource_types": [], "description": "Diseño y ciclo de vida" }
+  }
+}

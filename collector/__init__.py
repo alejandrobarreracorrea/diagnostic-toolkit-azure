@@ -1,0 +1,1 @@
+# Azure diagnostic toolkit - Collector

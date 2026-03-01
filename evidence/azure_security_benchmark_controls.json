@@ -1,0 +1,18 @@
+{
+  "source": "https://learn.microsoft.com/en-us/security/benchmark/azure/overview-v3",
+  "version": "3.0",
+  "control_domains": [
+    { "id": "NS", "name": "Network Security", "description": "Protección y seguridad de redes Azure" },
+    { "id": "IM", "name": "Identity Management", "description": "Identidad segura y controles de acceso con Azure AD" },
+    { "id": "PA", "name": "Privileged Access", "description": "Protección del acceso privilegiado" },
+    { "id": "DP", "name": "Data Protection", "description": "Protección de datos en reposo, tránsito y acceso" },
+    { "id": "AM", "name": "Asset Management", "description": "Visibilidad y gobernanza de recursos" },
+    { "id": "LT", "name": "Logging and Threat Detection", "description": "Registros y detección de amenazas" },
+    { "id": "IR", "name": "Incident Response", "description": "Respuesta a incidentes" },
+    { "id": "PV", "name": "Posture and Vulnerability Management", "description": "Postura y gestión de vulnerabilidades" },
+    { "id": "ES", "name": "Endpoint Security", "description": "Seguridad de endpoints" },
+    { "id": "BR", "name": "Backup and Recovery", "description": "Backup y recuperación" },
+    { "id": "DS", "name": "DevOps Security", "description": "Seguridad en DevOps" },
+    { "id": "GS", "name": "Governance and Strategy", "description": "Gobernanza y estrategia de seguridad" }
+  ]
+}
